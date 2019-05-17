@@ -178,7 +178,7 @@ class BounceMessageVerifier(object):
                 outbytes.write(text(field_value))
                 outbytes.write(text("\n"))
 
-        return outbytes.getvalue()
+        return outbytes.getvalue().encode()
 
 
 def verify_bounce_message(msg):
